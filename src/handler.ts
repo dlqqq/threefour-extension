@@ -1,5 +1,4 @@
 import { URLExt } from '@jupyterlab/coreutils';
-
 import { ServerConnection } from '@jupyterlab/services';
 
 /**
@@ -25,7 +24,10 @@ export async function requestAPI<T>(
   try {
     response = await ServerConnection.makeRequest(requestUrl, init, settings);
   } catch (error) {
-    throw new ServerConnection.NetworkError(error);
+    if (error instanceof TypeError) {
+      throw new ServerConnection.NetworkError(error);
+    }
+    throw error;
   }
 
   let data: any = await response.text();
