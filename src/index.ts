@@ -1,7 +1,7 @@
 import {
   JupyterFrontEnd,
   JupyterFrontEndPlugin
-} from '@jupyterlab/application';
+} from './jupyterlab/application';
 
 import { requestAPI } from './handler';
 
@@ -17,6 +17,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     requestAPI<any>('get_example')
       .then(data => {
         console.log(data);
+        alert('It works.');
       })
       .catch(reason => {
         console.error(
