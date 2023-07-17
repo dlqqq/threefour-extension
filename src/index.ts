@@ -1,7 +1,7 @@
 import {
   JupyterFrontEnd,
   JupyterFrontEndPlugin
-} from './jupyterlab/application';
+} from '@jupyterlab/application';
 
 import { requestAPI } from './handler';
 

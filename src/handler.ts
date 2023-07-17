@@ -1,5 +1,5 @@
-import { URLExt } from './jupyterlab/coreutils';
-import { ServerConnection } from './jupyterlab/services';
+import { URLExt } from '@jupyterlab/coreutils';
+import { ServerConnection } from '@jupyterlab/services';
 
 /**
  * Call the API extension

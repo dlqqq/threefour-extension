@@ -11,6 +11,9 @@
     "noEmitOnError": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
+    "paths": {
+      "@jupyterlab/*": ["./src/jupyterlab/*"]
+    },
     "preserveWatchOutput": true,
     "resolveJsonModule": true,
     "outDir": "lib",
